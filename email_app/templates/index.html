@@ -20,41 +20,57 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<style>
+	label {
+	  color: white;
+	}
+		body {
+ background-image: url("https://cdn.dribbble.com/users/2297668/screenshots/9808166/artboard_copy_4x.png");
+
+}
+</style>
+
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center" style="margin: 30px; text-transform: uppercase; font-family: 'Times New Roman', Times, serif;">
-                    Sign Up
-                </h1>
-            </div>
-        </div>
+    <div class="container" style="margin-top:100px;">
         <div class="row">
             <div class="col-md-3">
 
             </div>
-            <div class="col-md-6" style="background-color: #0062cc; padding: 20px; border-radius: 5px;">
+            <div class="col-md-6" style="background-color: #0062cc; padding: 20px; border-radius: 50px;">
                 <form action="http://127.0.0.1:8000" method="POST" class="form">
-                    {% csrf_token %}
+					<div class="row">
+						<div class="col-md-12">
+							<h1 class="text-center" style="margin: 15px; color:white;">
+								Sign Up
+							</h1>
+						</div>
+					</div>
+					{% csrf_token %}
                     <div class="form-group">
+					    <label>User Name</label>
                         <input type="text" class="form-control" id="username" name="username" placeholder="Username *" value="" required />
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name *" value="" required />
+						<label>First Name</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Sakura" value="" required />
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name *" value="" required />
+											<label>First Name</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Chen" value="" required />
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email *" value="" required />
+											<label>Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="SakuraChen02@email.com*" value="" required />
                     </div>
                     <div class="form-group">
+											<label>Password</label>
                         <input type="password" class="form-control" id="password1" name="password1" placeholder="Your Password *" value="" required />
                     </div>
                     <div class="form-group">
+											<label>Re-Enter Password</label>
                         <input type="password" class="form-control" id="password2" name="password2" placeholder="Confrim your Password *" value="" required />
                     </div>
                     <div class="form-group text-center">
@@ -141,6 +157,7 @@
                 // document.querySelector('#start-button').innerHTML = 'Start Listening';
                 endCallback()
             };
+
             recognition.onresult = function() {
                 let content = event.results[0][0].transcript
                 if (content.includes('.com') || content.includes('gmail') || content.includes('.com')) {
