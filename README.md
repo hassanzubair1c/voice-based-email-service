@@ -1,4 +1,4 @@
-# lifo-fb-crawler
+# Voice Based Email System for Visually Impaired People
 This is python development environment.
 In order to run and test please follow.
 
