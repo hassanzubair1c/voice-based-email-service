@@ -25,7 +25,7 @@ SECRET_KEY = 'mp@-ru2d@qy1ci21v#n@p7bl9c*peu!vysj@s(@#ed_7npy5k-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
@@ -124,3 +124,4 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
