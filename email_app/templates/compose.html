@@ -15,19 +15,19 @@
 <div class="container bootdey">
     <div class="email-app">
         <nav>
-            <a href="http://127.0.0.1:8000/compose/" class="btn btn-danger btn-block">New Email</a>
+            <a href="{% url 'compose' %}" class="btn btn-danger btn-block">New Email</a>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:8000/inbox/"><i class="fa fa-inbox"></i> Inbox <span class="badge badge-danger">4</span></a>
+                    <a class="nav-link" href="{% url 'inbox' %}/"><i class="fa fa-inbox"></i> Inbox <span class="badge badge-danger">4</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:8000/sent/"><i class="fa fa-rocket"></i> Sent</a>
+                    <a class="nav-link" href="{% url 'sent' %}"><i class="fa fa-rocket"></i> Sent</a>
                 </li>
             </ul>
         </nav>
         <main>
             <p class="text-center">New Message</p>
-            <form method="POST" action="">
+            <form method="POST" action="{% url 'compose' %}" class="form">
                 {% csrf_token %}
                 <div class="form-row mb-3">
                     <label for="to" class="col-2 col-sm-1 col-form-label">To:</label>
