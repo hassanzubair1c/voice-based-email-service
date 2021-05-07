@@ -4,13 +4,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
 # Base Url for testing
-APP_BASE_URL = "http://127.0.0.1:8000/"
+APP_BASE_URL = "https://salty-eyrie-98022.herokuapp.com/"
 
 # driver initialization
 options = Options()
 options.add_argument('--headless')
 options.page_load_strategy = 'normal'
-web_driver = webdriver.Chrome(executable_path="./88/chromedriver", options=options)
+web_driver = webdriver.Chrome(executable_path=".chromedriver", options=options)
 
 
 def signup_test():
